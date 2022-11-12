@@ -22,12 +22,16 @@ class Rectangle:
         return self.__height
     @height.setter
     def height(self, val):
+        if val <= 0:
+            raise ValueError("height should be a positive number")
         self.__height = val
     @property
     def width(self):
         return self.__width
     @width.setter
     def width (self, val):
+        if val <= 0:
+            raise ValueError("width should be a positive number")
         self.__width = val
 
 rect = Rectangle(12, 6)
